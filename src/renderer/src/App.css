@@ -1,0 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+}
+
+#dragable-top-bar {
+  -webkit-app-region: drag;
+}
