@@ -24,8 +24,7 @@ const NoteBanner = ({ id, noteName, createdAt, active }: Note) => {
       className={`cursor-pointer w-full flex flex-col gap-1 items-start justify-center 
     rounded-lg p-3 backdrop-blur-md transition duration-200 
      shadow-sm 
-    bg-zinc-800/30
-    ${active ? 'bg-zinc-100 text-zinc-900' : 'text-zinc-100 border border-zinc-700/40 hover:bg-zinc-700/20 '}`}
+    ${active ? 'bg-zinc-100 text-zinc-900' : 'text-zinc-100 bg-zinc-800/30 border border-zinc-700/40 hover:bg-zinc-700/20 '}`}
       onClick={() => handleNoteClick()}
     >
       <p className="text-sm font-semibold truncate w-full">{noteName}</p>
