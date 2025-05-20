@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <div className="w-64 h-screen pt-10 px-2">
       <SearchBar />
-      <div className="h-[calc(100vh-5.5rem)] flex flex-col gap-1 mt-2 overflow-y-auto">
+      <div className="h-[calc(100vh-5.5rem)] flex flex-col gap-1.5 mt-2 overflow-y-auto">
         {notes.map((note) => (
           <div key={note.id}>
             <NoteBanner

@@ -1,15 +1,24 @@
+import { useAtom } from 'jotai'
+import { notesAtom } from '@renderer/store/notes'
+
 type Note = {
   id: number
   noteName: string
   createdAt: string
   active: boolean
 }
-
-const NoteBanner = ({ id, noteName, createdAt,active }: Note) => {
+const NoteBanner = ({ id, noteName, createdAt, active }: Note) => {
+  const [notes, setNotes] = useAtom(notesAtom)
 
   const handleNoteClick = () => {
-    console.log(id)
+    setNotes(
+      notes.map((note) => ({
+        ...note,
+        active: note.id === id
+      }))
+    )
   }
+
   return (
     <div
       className={`cursor-pointer w-full flex flex-col gap-1 items-start justify-center 

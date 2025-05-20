@@ -27,7 +27,10 @@
     "@mdxeditor/editor": "^3.32.3",
     "@tailwindcss/typography": "^0.5.16",
     "jotai": "^2.12.4",
-    "lucide-react": "^0.511.0"
+    "lucide-react": "^0.511.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^3.0.0",
