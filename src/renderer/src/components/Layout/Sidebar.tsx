@@ -1,25 +1,10 @@
 import SearchBar from '../SearchBar'
 import NoteBanner from '../NoteBanner'
+import { useAtom } from 'jotai'
+import { notesAtom } from '@renderer/store/notes'
 
 const Sidebar = () => {
-  type Note = {
-    id: number
-    noteName: string
-    createdAt: string
-    active: boolean
-  }
-
-  const notes: Note[] = Array.from({ length: 10 }, (_, i) => ({
-    id: i + 1,
-    noteName: `Note ${i + 1}`,
-    createdAt: new Date().toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    }),
-    active: false
-  }))
-
+  const [notes, _] = useAtom(notesAtom)
   return (
     <div className="w-64 h-screen pt-10 px-2">
       <SearchBar />
